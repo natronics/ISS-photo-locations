@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en-US">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <title>ISS Photo Locations</title>
+ </head>
+ <body>
+  <div class="wrapper">
+   <div id="header">
+    <div class="container">
+     <h1><a href="http://natronics.github.com">natronics</a> <small>on github.com</small></h1>
+     <p><a href="https://github.com/natronics/ISS-photo-locations/">./ISS-photo-locations/</a><p>
+    </div>
+   </div>
+   <div id="content"><div class="container"><div class="row"><div class="span8 offset2 article">
+
+    <h2>Location of Every Photo From the ISS</h2>
+    <span class="pubdate">March 2013</span>
+    <p>
+     Since the first mission to the International Space Station over 12 years ago there have been over a <em>million</em>
+     photographs taken by astronauts looking out from four hundred kilometers above Earth. Nearly all of them
+     have been <a href="http://eol.jsc.nasa.gov/" title="The Gateway to Astronaut Photography of Earth">archived on NASA&rsquo;s servers</a>.
+     I&rsquo;ve crawled that archive, pulling down the location for each of the 1,129,177 photographs
+     taken from the ISS<sup>1</sup>. <span class="footnote"><sup>1</sup>Photos were only archived if they were 
+        found in the database and had a known latitude and longitude. It&rsquo;s not necessarily
+        every single image ever taken, but it&rsquo;s close.</span>
+    </p>
+
+    <h3>The Data</h3>
+    <p>Downloads:</p>
+    <div class="row">
+     <div class="span2 offset1"><a onClick="_gaq.push(['_trackEvent', 'Downloads', 'zip', 'ISS Photo Locations']);" href="https://github.com/natronics/ISS-photo-locations/archive/master.zip"><i class="icon-zip"></i> .zip</a></div>
+     <div class="span2"><a onClick="_gaq.push(['_trackEvent', 'Downloads', 'tar', 'ISS Photo Locations']);" href="https://github.com/natronics/ISS-photo-locations/archive/master.tar.gz"><i class="icon-tar"></i> .tar.gz</a></div>
+     <div class="span3"><a href="https://github.com/natronics/ISS-photo-locations/"><i class="icon-github"></i> View on github</a></div>
+    </div>
+    <h4>Files</h4>
+    <p>
+     The data exists in a collection of .csv files in the folder <code>data/</code>. There
+     is a file for each ISS mission, <code>ISS001.csv</code>, <code>ISS002.csv</code>, etc. in the following format:
+    </p>
+    <table class="table table-striped">
+     <tbody>
+      <tr><th>Column</th><td>Mission Roll Frame</td><td>Latitude</td><td>Longitude</td></tr>
+      <tr><th>Example</th><td>ISS001-E-5411,</td><td>45.5,</td><td>-122.6</td></tr>
+     </tbody>
+    </table>
+    <p>&nbsp;</p>
+
+    <h3>Visualization</h3>
+    <p>
+     If we draw a dot for the location of every photo of Earth taken from space what do we see?
+    </p>
+    <div class="image primary">
+     <a href="all_iss.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions']);"><img src="all_iss.preview.png" alt="Dot for very ISS image"></a>
+    </div>
+    <p>
+     Most of the photos are taken of land. Coastlines, islands and cities seem to be popular targets. So much so that it&rsquo;s possible to make out
+     basic continents. This makes sense, photos of clouds over an otherwise blank ocean get old after a while. I&rsquo;m sure every astronaut 
+     has taken at least one photograph of the town they grew up in.
+    </p>
+    <p>
+     Now let&rsquo;s divide up the dots by mission. Is there any pattern? Here each mission is
+     shown in a different color:
+    </p>
+    <div class="image primary">
+     <a href="all_iss_missions.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions colored']);"><img src="all_iss_missions.preview.png" alt="Dot for very ISS image with colors for each mission"></a>
+    </div>
+    <p>
+     The map is dominated by purple, light blue, and green with some yellow<sup>2</sup>. <span class="footnote"><sup>2</sup>ISS 30/31, 22, 13, and 6 respectively</span>
+     I also notice that the purple dots make almost uninterrupted orbit lines while most of the other dots seem to
+     fill in randomly. This is because during ISS 30/31
+     <a href="http://vimeo.com/61083440" title="The ISS Image Frontier - Making the invisible visible on Vimeo">Don Pettit
+        took dozens of amazing time lapse sequences</a> consisting of hundreds of images taken continuously as the ISS orbited.
+     In fact he&rsquo;s single-handedly responsible for almost half the images taken on orbit! Here&rsquo;s the breakdown:
+    </p>
+    <h4>Photo count by mission</h4>
+    <ul class="barchart">
+     <li><span class="title">ISS001</span><span class="bar" style="width:0px;">&nbsp;</span><span class="number outside">474</span></li>
+     <li><span class="title">ISS002</span><span class="bar" style="width:5px;">&nbsp;</span><span class="number outside">2,976</span></li>
+     <li><span class="title">ISS003</span><span class="bar" style="width:1px;">&nbsp;</span><span class="number outside">930</span></li>
+     <li><span class="title">ISS004</span><span class="bar" style="width:10px;">&nbsp;</span><span class="number outside">5,832</span></li>
+     <li><span class="title">ISS005</span><span class="bar" style="width:25px;">&nbsp;</span><span class="number outside">13,801</span></li>
+     <li><span class="title">ISS006</span><span class="bar" style="width:81px;">&nbsp;</span><span class="number outside">43,436</span></li>
+     <li><span class="title">ISS007</span><span class="bar" style="width:21px;">&nbsp;</span><span class="number outside">11,204</span></li>
+     <li><span class="title">ISS008</span><span class="bar" style="width:27px;">&nbsp;</span><span class="number outside">14,875</span></li>
+     <li><span class="title">ISS009</span><span class="bar" style="width:39px;">&nbsp;</span><span class="number outside">21,259</span></li>
+     <li><span class="title">ISS010</span><span class="bar" style="width:40px;">&nbsp;</span><span class="number outside">21,473</span></li>
+     <li><span class="title">ISS011</span><span class="bar" style="width:15px;">&nbsp;</span><span class="number outside">8,516</span></li>
+     <li><span class="title">ISS012</span><span class="bar" style="width:29px;">&nbsp;</span><span class="number outside">15,622</span></li>
+     <li><span class="title">ISS013</span><span class="bar" style="width:139px;">&nbsp;</span><span class="number outside">74,397</span></li>
+     <li><span class="title">ISS014</span><span class="bar" style="width:14px;">&nbsp;</span><span class="number outside">7,906</span></li>
+     <li><span class="title">ISS015</span><span class="bar" style="width:39px;">&nbsp;</span><span class="number outside">20,883</span></li>
+     <li><span class="title">ISS016</span><span class="bar" style="width:36px;">&nbsp;</span><span class="number outside">19,550</span></li>
+     <li><span class="title">ISS017</span><span class="bar" style="width:20px;">&nbsp;</span><span class="number outside">11,023</span></li>
+     <li><span class="title">ISS018</span><span class="bar" style="width:52px;">&nbsp;</span><span class="number outside">27,870</span></li>
+     <li><span class="title">ISS019</span><span class="bar" style="width:20px;">&nbsp;</span><span class="number outside">11,143</span></li>
+     <li><span class="title">ISS020</span><span class="bar" style="width:47px;">&nbsp;</span><span class="number outside">25,258</span></li>
+     <li><span class="title">ISS021</span><span class="bar" style="width:48px;">&nbsp;</span><span class="number outside">25,884</span></li>
+     <li><span class="title">ISS022</span><span class="bar" style="width:166px;">&nbsp;</span><span class="number outside">88,932</span></li>
+     <li><span class="title">ISS023</span><span class="bar" style="width:84px;">&nbsp;</span><span class="number outside">45,212</span></li>
+     <li><span class="title">ISS024</span><span class="bar" style="width:9px;">&nbsp;</span><span class="number outside">5,270</span></li>
+     <li><span class="title">ISS025</span><span class="bar" style="width:22px;">&nbsp;</span><span class="number outside">12,101</span></li>
+     <li><span class="title">ISS026</span><span class="bar" style="width:46px;">&nbsp;</span><span class="number outside">24,662</span></li>
+     <li><span class="title">ISS027</span><span class="bar" style="width:50px;">&nbsp;</span><span class="number outside">26,766</span></li>
+     <li><span class="title">ISS028</span><span class="bar" style="width:58px;">&nbsp;</span><span class="number outside">31,044</span></li>
+     <li><span class="title">ISS029</span><span class="bar" style="width:60px;">&nbsp;</span><span class="number outside">32,056</span></li>
+     <li><span class="title">ISS030</span><span class="bar" style="width:489px;">&nbsp;</span><span class="number outside">261,166</span></li>
+     <li><span class="title">ISS031</span><span class="bar" style="width:271px;">&nbsp;</span><span class="number outside">144,718</span></li>
+     <li><span class="title">ISS032</span><span class="bar" style="width:17px;">&nbsp;</span><span class="number outside">9,409</span></li>
+     <li><span class="title">ISS033</span><span class="bar" style="width:21px;">&nbsp;</span><span class="number outside">11,356</span></li>
+     <li><span class="title">ISS034</span><span class="bar" style="width:97px;">&nbsp;</span><span class="number outside">52,173</span></li>
+     <li class="total"><span class="title">Total:</span><strong>1,129,177</strong></li>
+    </ul>
+    <p>
+      One more thing we can do is add a map underneath to see exactly how the photos line up:<F5>
+    </p>
+    <div class="image primary">
+     <a href="all_iss_missions_map.png"  onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions colored with map']);"><img src="all_iss_missions_map.preview.png" alt="dot for every image, colored by mission, with map underlay"></a>
+    </div>
+    <p>
+     Here you can see that the ISS stays between about 50&deg; and -50&deg; latitude as it orbits the Earth
+     The <a href="http://en.wikipedia.org/wiki/Orbital_inclination" title="Orbital Inclination">inclination</a>
+     of the orbit of the station is in fact 51.6&deg;. This is high enough that it can communicate
+     with ground stations in Russia, while low enough that vehicles launching from the USA can reach it.
+    </p>
+    <p>
+     Since it&rsquo;s hard to see the overlapped colors in the above image here is a collection maps with the photos
+     from each mission mapped separately:
+    </p>
+    <div class="image primary">
+     <a href="small_mult.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'Small multiples']);"><img src="small_mult.preview.png" alt="collection maps with the photos from each mission mapped sepretely"></a>
+    </div>
+    <p>
+     The sudden explosion during ISS 30 is really evident here. And it looks like time lapses started becoming
+     poplar around ISS 28.
+    </p>
+    <p>
+     This is just some of the data that NASA has to offer. If you&rsquo;re interested in getting
+     involved in things like this I suggest taking a look at <a href="http://data.nasa.gov/">data.nasa.gov</a>,
+     <a href="http://spaceappschallenge.org/">International Space Apps Challenges</a>,
+     <a href="http://spacehack.org/">spacehack.org</a>, and of course, downloading this dataset.
+    </p>
+    <p>
+     Because this data is from NASA it is in the public domain. If you do end up using it I&rsquo;d be interested in hearing about it.
+     Feel free to <a href="http://natronics.github.com/aboutme">drop me a line</a> if you end up making something with it.
+    </p>
+    <div id="social">
+     <span class="note">Share this page</span>
+     <div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:url="http://natronics.github.com/ISS-photo-locations/" addthis:title="Visualization of astronaut photos">
+      <a class="addthis_button_twitter"></a>
+      <a class="addthis_button_facebook"></a>
+      <a class="addthis_button_google_plusone_share"></a>
+      <a class="addthis_button_reddit"></a>
+      <a class="addthis_counter addthis_bubble_style"></a>
+     </div>
+     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-514c13014905fe79"></script>
+    </div>
+
+   </div></div></div>
+  </div>
+ </div>
+ <div id="footer">
+  <div class="container">
+   <p class="pull-right"><a href="#">Back to top</a></p>
+   <p>made by <a href="http://twitter.com/natronics">@natronics</a> in the fabulous hipster paradise of Portland, Ore.
+   <ul class="github-links">
+    <li><a href="https://github.com/natronics">my github</a></li>
+    <li><a href="https://github.com/natronics/resume">r&eacute;sum&eacute;</a></li>
+    <li><a href="http://natronics.github.com/aboutme">get in touch</a></li>
+   </ul>
+   <p class="license">
+    this page is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">
+     Creative Commons Attribution 3.0 Unported License.
+     <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/3.0/80x15.png">
+    </a>
+   </p>
+  </div>
+ </div>
+
+ <script>
+  var header = $("#header .container");
+  header.slideUp(800);
+
+  $("#header").hover(function () {
+     header.slideDown(400);
+  });
+  $("#content .container").hover(function () {
+    header.slideUp(250);
+  });
+ </script>
+
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39517428-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+ </script>
+ </body>
+</html>

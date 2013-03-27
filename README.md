@@ -30,6 +30,9 @@ with open("data/ISS001.csv") as f:
         print mrf, latitude, longitude
 ```
 
+Also look in the scripts folder for example code for doing things like generating URLs to the
+images based on the Mission-Roll-Frame key in the CSV files.
+
 ## License
 
 This dataset is courtisy of the

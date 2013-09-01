@@ -44,6 +44,12 @@ file for each ISS mission, `ISS001.csv`, `ISS002.csv`, etc. in the following for
 If we draw a dot for the location of every photo of Earth taken from space
 what do we see?
 
+<div class="image primary">
+  <a href="visualizations/all_iss.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions']);">
+    <img class="img-responsive" src="visualizations/all_iss.preview.png" alt="Dot for very ISS image">
+  </a>
+</div>
+
 Most of the photos are taken of land. Coastlines, islands and cities seem
 to be popular targets. So much so that it's possible to make out basic
 continents. This makes sense, photos of clouds over an otherwise blank ocean
@@ -52,6 +58,12 @@ photograph of the town they grew up in.
 
 Now let's divide up the dots by mission. Is there any pattern? Here each mission
 is shown in a different color:
+
+<div class="image primary">
+  <a href="visualizations/all_iss_missions.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions colored']);">
+    <img class="img-responsive" src="visualizations/all_iss_missions.preview.png" alt="Dot for very ISS image with colors for each mission">
+  </a>
+</div>
 
 
 The map is dominated by purple, light blue, and green with some yellow<sup>2</sup>.

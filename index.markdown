@@ -21,9 +21,7 @@ longitude. It's not necessarily every single image ever taken, but it's close.</
 
 Downloads:
 
- - [.zip](https://github.com/natronics/ISS-photo-locations/archive/master.zip)
- - [.tar.gz](https://github.com/natronics/ISS-photo-locations/archive/master.tar.gz)
- - [View on github](https://github.com/natronics/ISS-photo-locations/)
+{% include getdata.html %}
 
 
 ### Files

@@ -16,7 +16,6 @@ from the ISS<sup>1</sup>. <span class="footnote"><sup>1</sup>Photos were only
 archived if they were found in the database and had a known latitude and
 longitude. It's not necessarily every single image ever taken, but it's close.</span>
 
-
 ### The Data
 
 Downloads:
@@ -64,12 +63,13 @@ is shown in a different color:
 </div>
 
 The map is dominated by purple, light blue, and green with some yellow<sup>2</sup>.
-<span class="footnote"><sup>2</sup>ISS 30/31, 22, 13, and 6 respectively</span> I
-also notice that the purple dots make almost uninterrupted orbit lines while most
+I also notice that the purple dots make almost uninterrupted orbit lines while most
 of the other dots seem to fill in randomly. This is because during ISS 30/31
 [Don Pettit took dozens of amazing time lapse sequences](http://vimeo.com/61083440)
 consisting of hundreds of images taken continuously as the ISS orbited. In fact
 he's single-handedly responsible for almost half the images taken on orbit!
+<span class="footnote"><sup>2</sup>ISS 30/31, 22, 13, and 6 respectively</span>
+
 Here's the breakdown:
 
 

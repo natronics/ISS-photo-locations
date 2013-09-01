@@ -1,6 +1,6 @@
 ---
 layout: article
-title: ISS photos
+title: Location of Every Photo From the ISS
 ---
 
 # Location of Every Photo From the ISS

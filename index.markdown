@@ -65,7 +65,6 @@ is shown in a different color:
   </a>
 </div>
 
-
 The map is dominated by purple, light blue, and green with some yellow<sup>2</sup>.
 <span class="footnote"><sup>2</sup>ISS 30/31, 22, 13, and 6 respectively</span> I
 also notice that the purple dots make almost uninterrupted orbit lines while most
@@ -82,6 +81,11 @@ Here's the breakdown:
 
 One more thing we can do is add a map underneath to see exactly how the photos line up:
 
+<div class="image primary">
+  <a href="visualizations/all_iss_missions_map.png"  onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions colored with map']);">
+    <img class="img-responsive" src="visualizations/all_iss_missions_map.preview.png" alt="dot for every image, colored by mission, with map underlay">
+  </a>
+</div>
 
 Here you can see that the ISS stays between about 50&deg; and -50&deg; latitude as it orbits the Earth
 The [inclination](http://en.wikipedia.org/wiki/Orbital_inclination) of the orbit
@@ -91,6 +95,12 @@ can reach it.
 
 Since it's hard to see the overlapped colors in the above image here is a
 collection maps with the photos from each mission mapped separately:
+
+<div class="image primary">
+  <a href="visualizations/small_mult.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'Small multiples']);">
+    <img class="img-responsive" src="visualizations/small_mult.preview.png" alt="collection maps with the photos from each mission mapped sepretely">
+  </a>
+</div>
 
 The sudden explosion during ISS 30 is really evident here. And it looks like time
 lapses started becoming popular around ISS 28.

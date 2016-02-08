@@ -12,28 +12,25 @@ there have been over a _million_ photographs taken by astronauts looking out
 from four hundred kilometers above Earth. Nearly all of them have been
 [archived on NASA's servers](http://eol.jsc.nasa.gov/). I've crawled that
 archive, pulling down the location for each of the 1,129,177 photographs taken
-from the ISS<sup>1</sup>. <span class="footnote"><sup>1</sup>Photos were only
-archived if they were found in the database and had a known latitude and
-longitude. It's not necessarily every single image ever taken, but it's close.</span>
+from the ISS[^1].
 
 ### The Data
 
 Downloads:
 
-{% include getdata.html %}
-
+ - <a onClick="_gaq.push(['_trackEvent', 'Downloads', 'zip', 'ISS Photo Locations']);" href="https://github.com/natronics/ISS-photo-locations/archive/master.zip">archive.zip</a>
+ - <a onClick="_gaq.push(['_trackEvent', 'Downloads', 'tar', 'ISS Photo Locations']);" href="https://github.com/natronics/ISS-photo-locations/archive/master.tar.gz">archive.tar.gz</a>
+ - [GitHub project page](https://github.com/natronics/ISS-photo-locations/)
 
 ### Files
 
 The data exists in a collection of .csv files in the folder `data`. There is a
 file for each ISS mission, `ISS001.csv`, `ISS002.csv`, etc. in the following format:
 
-<table class="table table-striped">
- <tbody>
-  <tr><th>Column</th><td>Mission Roll Frame</td><td>Latitude</td><td>Longitude</td></tr>
-  <tr><th>Example</th><td>ISS001-E-5411,</td><td>45.5,</td><td>-122.6</td></tr>
- </tbody>
-</table>
+
+ Column:  | Mission-Roll-Frame | Latitude | Longitude
+ -------- | :----------------: | -------: | --------:
+ Example: |   ISS001-E-5411    |     45.5 |    -122.6
 
 
 ## Visualization
@@ -41,11 +38,9 @@ file for each ISS mission, `ISS001.csv`, `ISS002.csv`, etc. in the following for
 If we draw a dot for the location of every photo of Earth taken from space
 what do we see?
 
-<div class="image primary">
-  <a href="visualizations/all_iss.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions']);">
-    <img class="img-responsive" src="visualizations/all_iss.preview.png" alt="Dot for very ISS image">
-  </a>
-</div>
+
+[![Dot for every ISS picture](visualizations/all_iss.preview.png)](visualizations/all_iss.png)
+
 
 Most of the photos are taken of land. Coastlines, islands and cities seem
 to be popular targets. So much so that it's possible to make out basic
@@ -56,19 +51,16 @@ photograph of the town they grew up in.
 Now let's divide up the dots by mission. Is there any pattern? Here each mission
 is shown in a different color:
 
-<div class="image primary">
-  <a href="visualizations/all_iss_missions.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions colored']);">
-    <img class="img-responsive" src="visualizations/all_iss_missions.preview.png" alt="Dot for very ISS image with colors for each mission">
-  </a>
-</div>
 
-The map is dominated by purple, light blue, and green with some yellow<sup>2</sup>.
+[![Dot for very ISS image with colors for each mission](visualizations/all_iss_missions.preview.png)](visualizations/all_iss_missions.png)
+
+
+The map is dominated by purple, light blue, and green with some yellow[^2].
 I also notice that the purple dots make almost uninterrupted orbit lines while most
 of the other dots seem to fill in randomly. This is because during ISS 30/31
 [Don Pettit took dozens of amazing time lapse sequences](http://vimeo.com/61083440)
 consisting of hundreds of images taken continuously as the ISS orbited. In fact
 he's single-handedly responsible for almost half the images taken on orbit!
-<span class="footnote"><sup>2</sup>ISS 30/31, 22, 13, and 6 respectively</span>
 
 Here's the breakdown:
 
@@ -79,11 +71,9 @@ Here's the breakdown:
 
 One more thing we can do is add a map underneath to see exactly how the photos line up:
 
-<div class="image primary">
-  <a href="visualizations/all_iss_missions_map.png"  onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'All missions colored with map']);">
-    <img class="img-responsive" src="visualizations/all_iss_missions_map.preview.png" alt="dot for every image, colored by mission, with map underlay">
-  </a>
-</div>
+
+[![dot for every image, colored by mission, with map underlay](visualizations/all_iss_missions_map.preview.png)](visualizations/all_iss_missions_map.png)
+
 
 Here you can see that the ISS stays between about 50&deg; and -50&deg; latitude as it orbits the Earth
 The [inclination](http://en.wikipedia.org/wiki/Orbital_inclination) of the orbit
@@ -94,11 +84,9 @@ can reach it.
 Since it's hard to see the overlapped colors in the above image here is a
 collection maps with the photos from each mission mapped separately:
 
-<div class="image primary">
-  <a href="visualizations/small_mult.png" onClick="_gaq.push(['_trackEvent', 'Photos', 'fullsize', 'Small multiples']);">
-    <img class="img-responsive" src="visualizations/small_mult.preview.png" alt="collection maps with the photos from each mission mapped sepretely">
-  </a>
-</div>
+
+[![collection maps with the photos from each mission mapped sepretely](visualizations/small_mult.preview.png)](visualizations/small_mult.png)
+
 
 The sudden explosion during ISS 30 is really evident here. And it looks like time
 lapses started becoming popular around ISS 28.
@@ -113,4 +101,10 @@ Because this data is from NASA it is in the public domain. If you do end up usin
 I'd be interested in hearing about it. Feel free to [drop me a line](http://natronics.github.com/aboutme)
 if you end up making something with it.
 
-{% include share.html %}
+
+--------------------------------------------------------------------------------
+
+**Footnotes**
+
+[^1]: Photos were only archived if they were found in the database and had a known latitude and longitude. It's not necessarily every single image ever taken, but it's close.
+[^2]: ISS 30/31, 22, 13, and 6 respectively
